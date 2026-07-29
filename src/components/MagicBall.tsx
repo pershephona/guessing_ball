@@ -9,13 +9,13 @@ const SHAKE_DURATION_MS = 650;
 
 // Default picked hue is the complement of the classic Magic 8 Ball blue,
 // so the default triangle/window render as that same blue.
-const DEFAULT_ACCENT: AccentColor = { hue: 37, shade: 92 };
+const DEFAULT_ACCENT: AccentColor = { hue: 37, shade: 100 };
 
 // Lightness stops (%) for the neutral shell (page background + ball),
 // from the light-theme end (wheel center) to the dark-theme end (wheel edge).
 const PAGE_LIGHTNESS = { light: [92, 97, 99], dark: [11, 4, 2] };
 const BALL_LIGHTNESS = { light: [82, 92, 97, 99], dark: [26, 12, 5, 1] };
-const SHELL_SATURATION = 3;
+const SHELL_SATURATION = 35;
 
 function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t;
@@ -60,6 +60,13 @@ export default function MagicBall() {
     themeT
   );
 
+  // Keep text readable at every shade: push it far from the background's
+  // own lightness instead of interpolating in step with it (which would
+  // wash out to zero contrast around the midpoint).
+  const bgLightness = lerp(PAGE_LIGHTNESS.light[0], PAGE_LIGHTNESS.dark[0], themeT);
+  const fgLightness =
+    bgLightness > 50 ? Math.max(5, bgLightness - 45) : Math.min(95, bgLightness + 45);
+
   const themeVars = {
     "--accent-h": accent.hue,
     "--accent-h-comp": (accent.hue + 180) % 360,
@@ -71,7 +78,7 @@ export default function MagicBall() {
     "--ball-l2": ballL2,
     "--ball-l3": ballL3,
     "--ball-l4": ballL4,
-    "--fg-l": `${lerp(15, 97, themeT).toFixed(1)}%`,
+    "--fg-l": `${fgLightness.toFixed(1)}%`,
   } as CSSProperties;
 
   return (
