@@ -48,22 +48,22 @@
   --fg-rgb: 42 34 74;
 }
 
-/* Theme 3 — Ruby */
+/* Theme 3 — Marina (Sky Blue / Pacific Cyan / Dodger Blue / Classic Crimson / Prussian Blue) */
 .theme3 {
-  --page-1: #2c1417;
-  --page-2: #140809;
-  --page-3: #080304;
-  --ball-1: #4f3236;
-  --ball-2: #291a1c;
-  --ball-3: #150c0d;
-  --ball-4: #060303;
-  --window-1: #6b0f24;
-  --window-2: #3a0813;
-  --window-3: #150307;
-  --triangle-1: #ff6b7a;
-  --triangle-2: #e63950;
-  --triangle-3: #a4162e;
-  --fg-rgb: 247 242 243;
+  --page-1: #448fa3;
+  --page-2: #235367;
+  --page-3: #02182b;
+  --ball-1: #68c5db;
+  --ball-2: #448fa3;
+  --ball-3: #133649;
+  --ball-4: #02182b;
+  --window-1: #d7263d;
+  --window-2: #61111b;
+  --window-3: #200609;
+  --triangle-1: #5abcf9;
+  --triangle-2: #0197f6;
+  --triangle-3: #015387;
+  --fg-rgb: 232 245 250;
 }
 
 /* Theme 4 — Violet */
