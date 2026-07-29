@@ -1,15 +1,18 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, type CSSProperties } from "react";
 import styles from "./MagicBall.module.css";
 import { answers, ui, type Locale } from "@/lib/answers";
+import ColorPicker, { type AccentColor } from "./ColorPicker";
 
 const SHAKE_DURATION_MS = 650;
+const DEFAULT_ACCENT: AccentColor = { hue: 217, saturation: 90 };
 
 export default function MagicBall() {
   const [locale, setLocale] = useState<Locale>("ru");
   const [isShaking, setIsShaking] = useState(false);
   const [answerIndex, setAnswerIndex] = useState<number | null>(null);
+  const [accent, setAccent] = useState<AccentColor>(DEFAULT_ACCENT);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const t = ui[locale];
@@ -30,20 +33,24 @@ export default function MagicBall() {
 
   return (
     <main className={styles.page}>
-      <div className={styles.langSwitch} role="group" aria-label="Language">
-        {(["ru", "en"] as const).map((code) => (
-          <button
-            key={code}
-            type="button"
-            className={`${styles.langButton} ${
-              locale === code ? styles.langButtonActive : ""
-            }`}
-            onClick={() => setLocale(code)}
-            aria-pressed={locale === code}
-          >
-            {code.toUpperCase()}
-          </button>
-        ))}
+      <div className={styles.topBar}>
+        <ColorPicker value={accent} onChange={setAccent} />
+
+        <div className={styles.langSwitch} role="group" aria-label="Language">
+          {(["ru", "en"] as const).map((code) => (
+            <button
+              key={code}
+              type="button"
+              className={`${styles.langButton} ${
+                locale === code ? styles.langButtonActive : ""
+              }`}
+              onClick={() => setLocale(code)}
+              aria-pressed={locale === code}
+            >
+              {code.toUpperCase()}
+            </button>
+          ))}
+        </div>
       </div>
 
       <h1 className={styles.title}>{t.title}</h1>
@@ -59,6 +66,12 @@ export default function MagicBall() {
       >
         <div
           className={`${styles.ball} ${isShaking ? styles.ballShaking : ""}`}
+          style={
+            {
+              "--accent-h": accent.hue,
+              "--accent-s": `${accent.saturation}%`,
+            } as CSSProperties
+          }
         >
           <div className={styles.window}>
             <div className={styles.triangle}>
