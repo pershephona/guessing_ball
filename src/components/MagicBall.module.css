@@ -134,17 +134,17 @@
 .triangle {
   position: absolute;
   inset: 0;
-  clip-path: polygon(50% 6%, 94% 90%, 6% 90%);
+  clip-path: polygon(50% 12%, 98% 92%, 2% 92%);
   background: linear-gradient(160deg, #4f8dff 0%, #2f6fe0 45%, #1c4fb8 100%);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 12%;
+  padding-top: 14%;
   box-sizing: border-box;
 }
 
 .answerText {
-  max-width: 52%;
+  max-width: 40%;
   font-size: clamp(0.6rem, 2.3vw, 0.85rem);
   line-height: 1.28;
   font-weight: 700;
