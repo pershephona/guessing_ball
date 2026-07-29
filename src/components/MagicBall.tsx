@@ -61,10 +61,11 @@ export default function MagicBall() {
           className={`${styles.ball} ${isShaking ? styles.ballShaking : ""}`}
         >
           <div className={styles.window}>
-            <div className={styles.triangle} aria-hidden="true" />
-            <span className={styles.answerText}>
-              {isShaking ? "" : displayedText}
-            </span>
+            <div className={styles.triangle}>
+              <span className={styles.answerText}>
+                {isShaking ? "" : displayedText}
+              </span>
+            </div>
           </div>
         </div>
       </button>
