@@ -1,39 +1,26 @@
-# Guessing Ball / Шар предсказаний
+# Guessing Ball
 
-Простой сайт-магический шар (Magic 8 Ball). Нажмите на шар — он потрясётся и покажет один из восьми ответов на русском или английском языке (переключатель RU/EN в правом верхнем углу).
+A Magic 8 Ball site. Tap the ball to shake it and reveal one of eight answers, in Russian or English (RU/EN toggle, top right).
 
-Ответы:
+Built with Next.js (App Router) + TypeScript, statically exported for GitHub Pages.
 
-- Да / Yes
-- Нет / No
-- Возможно / Maybe
-- Двигайся в том же направлении / Keep going the same way
-- Не могу сказать точно / Cannot predict now
-- Скорее всего нет / Most likely not
-- Скорее всего да / Most likely yes
-- Тебе нужно рассмотреть другие варианты / You should consider other options
-
-## Стек
-
-Next.js (App Router) + TypeScript + CSS Modules, статический экспорт (`output: "export"`) для публикации на GitHub Pages.
-
-## Разработка
+## Develop
 
 ```bash
 npm install
 npm run dev
 ```
 
-Открыть [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000).
 
-## Сборка статики
+## Build
 
 ```bash
 npm run build
 ```
 
-Результат — в папке `out/`.
+Output goes to `out/`.
 
-## Деплой
+## Deploy
 
-При пуше в ветку `main` workflow `.github/workflows/deploy.yml` собирает сайт и публикует его на GitHub Pages. В настройках репозитория (Settings → Pages) источник должен быть выставлен как **GitHub Actions**.
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds and publishes to GitHub Pages. Set the repo's Pages source to **GitHub Actions** (Settings → Pages).
