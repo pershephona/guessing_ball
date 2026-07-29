@@ -45,9 +45,13 @@ export default function ColorPicker({ value, onChange }: ColorPickerProps) {
     const dy = clientY - (rect.top + radius);
     const distance = Math.min(Math.sqrt(dx * dx + dy * dy), radius);
     const angle = (Math.atan2(dy, dx) * 180) / Math.PI;
+    // The wheel's conic-gradient starts red at the top (12 o'clock) and
+    // sweeps clockwise, while atan2 measures from the right (3 o'clock).
+    // Rotate by 90deg so the picked hue matches the color under the cursor.
+    const hue = (angle + 90 + 360) % 360;
 
     onChange({
-      hue: Math.round((angle + 360) % 360),
+      hue: Math.round(hue),
       shade: Math.round((distance / radius) * 100),
     });
   }
@@ -67,7 +71,7 @@ export default function ColorPicker({ value, onChange }: ColorPickerProps) {
     draggingRef.current = false;
   }
 
-  const angleRad = (value.hue * Math.PI) / 180;
+  const angleRad = ((value.hue - 90) * Math.PI) / 180;
   const knobRadius = (value.shade / 100) * (WHEEL_SIZE / 2);
   const knobX = WHEEL_SIZE / 2 + Math.cos(angleRad) * knobRadius;
   const knobY = WHEEL_SIZE / 2 + Math.sin(angleRad) * knobRadius;
