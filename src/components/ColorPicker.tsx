@@ -5,7 +5,8 @@ import styles from "./ColorPicker.module.css";
 
 export type AccentColor = {
   hue: number;
-  saturation: number;
+  /** 0 = center of the wheel (light theme), 100 = edge (dark theme). */
+  shade: number;
 };
 
 interface ColorPickerProps {
@@ -47,7 +48,7 @@ export default function ColorPicker({ value, onChange }: ColorPickerProps) {
 
     onChange({
       hue: Math.round((angle + 360) % 360),
-      saturation: Math.round((distance / radius) * 100),
+      shade: Math.round((distance / radius) * 100),
     });
   }
 
@@ -67,7 +68,7 @@ export default function ColorPicker({ value, onChange }: ColorPickerProps) {
   }
 
   const angleRad = (value.hue * Math.PI) / 180;
-  const knobRadius = (value.saturation / 100) * (WHEEL_SIZE / 2);
+  const knobRadius = (value.shade / 100) * (WHEEL_SIZE / 2);
   const knobX = WHEEL_SIZE / 2 + Math.cos(angleRad) * knobRadius;
   const knobY = WHEEL_SIZE / 2 + Math.sin(angleRad) * knobRadius;
 
