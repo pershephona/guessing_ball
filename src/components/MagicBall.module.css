@@ -50,20 +50,20 @@
 
 /* Theme 3 — Marina (Sky Blue / Pacific Cyan / Dodger Blue / Classic Crimson / Prussian Blue) */
 .theme3 {
-  --page-1: #448fa3;
-  --page-2: #235367;
-  --page-3: #02182b;
-  --ball-1: #68c5db;
-  --ball-2: #448fa3;
-  --ball-3: #133649;
-  --ball-4: #02182b;
-  --window-1: #d7263d;
-  --window-2: #61111b;
-  --window-3: #200609;
-  --triangle-1: #5abcf9;
+  --page-1: #d7263d;
+  --page-2: #761522;
+  --page-3: #2b080c;
+  --ball-1: #e77d8b;
+  --ball-2: #d7263d;
+  --ball-3: #761522;
+  --ball-4: #2b080c;
+  --window-1: #448fa3;
+  --window-2: #235367;
+  --window-3: #02182b;
+  --triangle-1: #68c5db;
   --triangle-2: #0197f6;
   --triangle-3: #015387;
-  --fg-rgb: 232 245 250;
+  --fg-rgb: 247 238 239;
 }
 
 /* Theme 4 — Violet */
