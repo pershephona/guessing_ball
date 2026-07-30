@@ -7,5 +7,5 @@ export const themeNames: Record<ThemeId, string> = {
   2: "Periwinkle",
   3: "Marina",
   4: "Blush",
-  5: "White",
+  5: "Solstice",
 };

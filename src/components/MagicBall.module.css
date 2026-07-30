@@ -84,22 +84,22 @@
   --fg-rgb: 244 232 231;
 }
 
-/* Theme 5 — White */
+/* Theme 5 — Solstice (Sunflower Gold / Lavender Veil / Hot Rose / Night Bordeaux / Dark Amethyst) */
 .theme5 {
-  --page-1: #eef0f3;
-  --page-2: #f6f7f9;
-  --page-3: #ffffff;
-  --ball-1: #ffffff;
-  --ball-2: #eef1f4;
-  --ball-3: #dde2e8;
-  --ball-4: #c7ced7;
-  --window-1: #14224d;
-  --window-2: #0a1230;
-  --window-3: #030614;
-  --triangle-1: #3a5bd9;
-  --triangle-2: #24409f;
-  --triangle-3: #17296b;
-  --fg-rgb: 20 21 28;
+  --page-1: #fab940;
+  --page-2: #834333;
+  --page-3: #5b1c2e;
+  --ball-1: #f8c99e;
+  --ball-2: #fab940;
+  --ball-3: #834333;
+  --ball-4: #5b1c2e;
+  --window-1: #4a1f7a;
+  --window-2: #341459;
+  --window-3: #25104d;
+  --triangle-1: #f7d9fc;
+  --triangle-2: #dc80b4;
+  --triangle-3: #c2286b;
+  --fg-rgb: 250 238 244;
 }
 
 .topBar {
