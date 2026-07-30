@@ -66,22 +66,22 @@
   --fg-rgb: 247 238 239;
 }
 
-/* Theme 4 — Violet */
+/* Theme 4 — Blush (Cobalt Blue / Pitch Black / Berry Blush / Pink Mist / Almond Silk) */
 .theme4 {
-  --page-1: #1f1730;
-  --page-2: #0d0817;
-  --page-3: #05030c;
-  --ball-1: #453a56;
-  --ball-2: #241c2e;
-  --ball-3: #120e18;
-  --ball-4: #050307;
-  --window-1: #3d0f6b;
-  --window-2: #200740;
-  --window-3: #0a0217;
-  --triangle-1: #c497ff;
-  --triangle-2: #9455f0;
-  --triangle-3: #6d28d9;
-  --fg-rgb: 245 242 247;
+  --page-1: #1a2440;
+  --page-2: #0f1420;
+  --page-3: #0d0a05;
+  --ball-1: #3a4a6b;
+  --ball-2: #1a2440;
+  --ball-3: #100d08;
+  --ball-4: #0d0a05;
+  --window-1: #0f43b2;
+  --window-2: #071e50;
+  --window-3: #020a1b;
+  --triangle-1: #efd2c9;
+  --triangle-2: #eda0b3;
+  --triangle-3: #a85080;
+  --fg-rgb: 244 232 231;
 }
 
 /* Theme 5 — White */
