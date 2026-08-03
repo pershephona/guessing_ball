@@ -293,11 +293,5 @@
 .footer {
   color: rgba(var(--fg-rgb) / 35%);
   font-size: 0.75rem;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer:hover {
-  color: rgba(var(--fg-rgb) / 70%);
-  text-decoration: underline;
+  margin: 0;
 }
