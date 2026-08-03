@@ -79,14 +79,7 @@ export default function MagicBall() {
 
       <p className={styles.hint}>{t.hint}</p>
 
-      <a
-        className={styles.footer}
-        href="https://github.com/pershephona"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        made by pershephona
-      </a>
+      <p className={styles.footer}>made by pershephona</p>
     </main>
   );
 }
